@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 int main(int argc, char* argv[])
 {
@@ -60,11 +61,21 @@ int main(int argc, char* argv[])
         }
         else printf("Error Handler Prüfung 1>0 \n");   
     }
-    
+    int dezimal1=0;
+    double potenz_counter=11;
+    int dezimal2=0;
     for ( i = 0; i < rows; i++)
     {
         printf(" %d ", count_arr[i] );
+        dezimal1 += count_arr[i]*pow(2,potenz_counter);
+        if (count_arr[i]==0)
+        {
+            dezimal2+= pow(2,potenz_counter);
+        }
+        
+        potenz_counter--;
+
     }
-    
+    printf("Die Lösung lautet: %d" , dezimal1*dezimal2);
     return 0;
 }
