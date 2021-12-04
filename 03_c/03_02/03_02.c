@@ -15,6 +15,14 @@ int main(int argc, char* argv[])
     int debug_arr_neg[x][y];
     int line_counter=0;
     int i =0;
+    int dezimal1=0;
+    double potenz_counter=11;
+    int dezimal2=0;
+    int count_arr[i];
+    int oxygen_arr[y];
+    int co2_arr[y];
+
+
      while (fgets(line, sizeof(line), file)) {
         //printf("%s", line);
         if (line[0] == '\n') break;
@@ -155,9 +163,6 @@ int main(int argc, char* argv[])
         }
              
     }
-    
-    int oxygen_arr[y];
-    int co2_arr[y];
    
     for ( i = 0; i < rows; i++)
     { 
@@ -174,10 +179,6 @@ int main(int argc, char* argv[])
         }
     }
     
-    int dezimal1=0;
-    double potenz_counter=11;
-    int dezimal2=0;
-    int count_arr[i];
     for ( i = 0; i < y; i++)
     {
         dezimal1 += oxygen_arr[i]*pow(2,potenz_counter);
