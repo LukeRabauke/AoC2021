@@ -11,8 +11,8 @@ int main(int argc, char* argv[])
     int rows=12;
     enum { x=1000 };
     enum { y=12 };
-    int debug_arr[x][y];
-    int debug_arr_neg[x][y];
+    int debug_arr[x][y]={0};
+    int debug_arr_neg[x][y]={0};
     int line_counter=0;
     int i =0;
     int dezimal1=0;
