@@ -13,6 +13,7 @@ int main(int argc, char* argv[])
     
     int coord[1000][4]={0}, i=0,k=0;
     int max_number=0;
+    int grid[990][990]={0};
     // initialisieren und ersten Abschnitt erstellen
     
     while (fgets(line, sizeof(line), file)) {
@@ -34,10 +35,15 @@ int main(int argc, char* argv[])
 
     for ( i = 0; i < 500; i++)
     {
-        if (coord[i][0]==coord[i][2] || coord[i][1] == coord[i][3] )
+        if (coord[i][0]==coord[i][2] )
         {
             /* code */
         }
+        else if( coord[i][1] == coord[i][3])
+        {
+
+        }
+
         
     }
     
