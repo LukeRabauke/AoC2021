@@ -7,12 +7,12 @@ int main(int argc, char* argv[])
 {
     char const* const fileName = "input.txt";
     FILE* file = fopen(fileName, "r");
-    char line[256], *ptr;
-    int crab_pos[1008]={0}, i=0, k=0, sum_fuel=0, max_coord=0, lowest_fuel=0, first_run=0, number_inputs=0;
-    char delim[]={","};
+    char line[1000000], *ptr;
+    int crab_pos[1000]={0}, i=0, k=0, sum_fuel=0, max_coord=0, lowest_fuel=INT32_MAX, first_run=0, number_inputs=0;
+    char delim[]={" , "};
 
     while (fgets(line, sizeof(line), file)) {
-        //printf("%s", line);
+        printf("%s", line);
         ptr = strtok(line, delim);
        
         while (ptr != NULL)
@@ -47,14 +47,8 @@ int main(int argc, char* argv[])
         {
             sum_fuel += abs(crab_pos[k]-i);
         }
-        
-        if (first_run==0)
-        {
-            first_run=1;
-            lowest_fuel=sum_fuel;
-
-        }
-        else if (first_run == 1 && sum_fuel < lowest_fuel)
+    
+        if (sum_fuel < lowest_fuel && sum_fuel>0)
         {
             lowest_fuel=sum_fuel;
         }
